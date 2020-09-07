@@ -1,6 +1,8 @@
 .messages {
+    max-width: 90%;
+
     h2 {
-        font-size: $medium-font;
+        font-size: $large-font;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -18,8 +20,10 @@
         list-style-type: none;
 
         &__msg {
-            font-size: $small-font;
+            font-size: $medium-font;
             opacity: .85;
+            text-align: center;
+            margin: 0 auto;
         }
     }
 }

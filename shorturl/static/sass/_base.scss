@@ -20,7 +20,15 @@
 }
 
 html {
-    font-size: $base-font; // 1rem
+    font-size: 10px; // 1rem
+
+    @include responsive(700px) {
+        font-size: 9px;
+    }
+
+    @include responsive(375px) {
+        font-size: 7px;
+    }
 }
 
 body {

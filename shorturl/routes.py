@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 from json import dumps
 
 """ 
-TODO: don't let people uploade duplicate links - SOLVED
+TODO: don't let people upload duplicate links - SOLVED
 * Duplication is an interesting topic, because we work with URLs
 * Duplicated URL is a URL which path is identical with an existing one in the database.
 * For this, we will only store the path in the database, removing any scheme, or www parts.
@@ -38,6 +38,7 @@ def index():
         check = get(API_URL + 'storage?where={"url":"' + path + '"}').json()['_items']
 
         if check:
+            flash('This path was already in our database')
             return render_template('slug.html', title='Short URL', url=WEBSITE_DOMAIN + '/' + check[0]['slug'])
 
         # * we generate the unique slog that appears after the WEBSITE_DOMAIN
@@ -63,7 +64,7 @@ def index():
 
 
 @app.route('/<slug>', methods=['GET'])
-@cache.cached(timeout=300)
+@cache.cached(timeout=600)
 def redirect_url(slug):
     check = get(API_URL + 'storage?where={"slug":"' + slug + '"}').json()['_items']
 

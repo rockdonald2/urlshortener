@@ -1,4 +1,6 @@
 .error {
+    margin-top: 4rem;
+
     &--icon {
         width: 6.4rem;
         height: 6.4rem;
@@ -8,5 +10,6 @@
 
     &--msg {
         font-size: $large-font;
+        text-align: center;
     }
 }
