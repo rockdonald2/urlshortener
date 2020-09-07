@@ -1,0 +1,5 @@
+{
+    "SECRET_KEY": "7b3dc1a239bb34eba3a2039ba831761adcdcc3511fddb865",
+    "API_URL": "http://127.0.0.1:5000/api/",
+    "WEBSITE_DOMAIN": "127.0.0.1:8000"
+}

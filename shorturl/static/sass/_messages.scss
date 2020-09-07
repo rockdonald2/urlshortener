@@ -1,0 +1,25 @@
+.messages {
+    h2 {
+        font-size: $medium-font;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    svg {
+        width: 3.2rem;
+        height: 3.2rem;
+        color: $title-color;
+        margin-right: 1rem;
+    }
+
+    &--list {
+        list-style-type: none;
+
+        &__msg {
+            font-size: $small-font;
+            opacity: .85;
+        }
+    }
+}

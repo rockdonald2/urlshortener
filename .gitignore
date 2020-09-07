@@ -1,0 +1,4 @@
+node_modules
+shorturl/__pycache__
+package-lock.json
+notes.md

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">&lt; URL SHORTENER &gt;</h1>
+<div class="form--container">
+    <form action=""
+        method="POST"
+        novalidate>
+        {{ form.hidden_tag() }}
+        <p class="form--url">
+            {{ form.url(placeholder="Enter the URL here...") }}
+            {% for error in form.url.errors %}
+            <p class="form--error"><svg xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>{{ error }}</p>
+            {% endfor %}
+        </p>
+        <p class="form--submit">
+            {{ form.submit() }}
+        </p>
+    </form>
+</div>
+<h2 class="author">&copy; Lukács Zsolt - 2020</h2>
+{% endblock %}

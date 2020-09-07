@@ -1,0 +1,21 @@
+.container {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.title {
+    font-size: $huge-font;
+    margin: 4rem 0;
+    color: $title-color;
+}
+
+.author {
+    font-size: $medium-font;
+    opacity: .5;
+    margin-top: 4rem;
+    font-weight: 400;
+}

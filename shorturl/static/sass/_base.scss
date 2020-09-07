@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+    color: inherit;
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+}
+
+::-moz-selection {
+    background-color: rgba($title-color, .4);
+}
+
+::selection {
+    background-color: rgba($title-color, .4);
+}
+
+html {
+    font-size: $base-font; // 1rem
+}
+
+body {
+    box-sizing: border-box;
+    color: $font-color;
+    background-color: $bg-color;
+    font-family: 'Open Sans',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

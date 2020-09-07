@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">&lt; Short URL &gt;</h1>
+<input type="text"
+    name="short_url"
+    id="short_url"
+    class="short-url--show"
+    readonly
+    value="{{ url }}">
+<button class="short-url--btn">Copy this URL</button>
+
+<script src="../static/js/copy.js"
+    defer></script>
+{% endblock %}

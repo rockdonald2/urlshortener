@@ -1,0 +1,12 @@
+.error {
+    &--icon {
+        width: 6.4rem;
+        height: 6.4rem;
+        color: $alert-color;
+        margin: 0 auto 5rem auto;
+    }
+
+    &--msg {
+        font-size: $large-font;
+    }
+}
