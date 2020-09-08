@@ -57,7 +57,6 @@ def index():
         # * after we got the slug, we make a POST request to the database, uploading our new entry
         resp = post(API_URL + 'storage/', dumps(entry), headers=headers)
 
-        """ flash('Validated submitted url: {}, with slug: {}'.format(path, slug)) """
         return render_template('slug.html', title='Short URL', url='http://' + WEBSITE_DOMAIN + '/' + slug)
 
     return render_template('index.html', title='URL Shortener', form=form)
